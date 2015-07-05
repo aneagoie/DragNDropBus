@@ -49,7 +49,7 @@ function handleDrop(e) {
     // This element will become draggable
       this.setAttribute("draggable", "true");
       this.style.cursor = 'pointer';
-      this.style.background = 'url("../images/icon_bg.svg") no-repeat center #C6C6C6';
+      this.style.background = 'url("images/icon_bg.svg") no-repeat center #C6C6C6';
       this.style.backgroundSize = "cover";
     }
     if(!dragSrcEl.textContent) {
