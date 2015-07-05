@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles/main.css" type="text/css" media="all"/>
+    </head>
+    <body>
+    <div class="interactive">
+
+        <div id="header">FEEDING THE POSITIVE DOG</div>
+        <div class="button help-button" id="help-button">?</div>
+        <div class="bus"></div>
+        <div class="reference-pile">
+            <div class="reference-item green" id="ref-1">
+                <div class="text">Be Generous</div>
+            </div>
+            <div class="reference-item green" id="ref-2">
+                <div class="text">Act Thoughtfully</div>
+            </div>
+            <div class="reference-item green" id="ref-3">
+                <div class="text">Honor Creativity</div>
+            </div>
+            <div class="reference-item green" id="ref-4">
+                <div class="text">Respect Coworkers</div>
+            </div>
+            <div class="reference-item green" id="ref-5">
+                <div class="text">Express Gratitude</div>
+            </div>
+            <div class="reference-item green" id="ref-6">
+                <div class="text">Recognize Dedication</div>
+            </div>
+            <div class="reference-item green" id="ref-7">
+                <div class="text">Be Enthusiastic</div>
+            </div>
+        </div>
+        <div class="draggable-pile">
+            <div class="droppable-container" id="drop-1" ></div>
+            <div class="droppable-container" id="drop-2" ></div>
+            <div class="droppable-container" id="drop-3" ></div>
+            <div class="draggable-item green" id="drag-1" draggable="true">
+                <div class="text">Be Generous</div>
+            </div>
+            <div class="draggable-item green" id="drag-2" draggable="true">
+                <div class="text">Act Thoughtfully</div>
+            </div>
+            <div class="draggable-item green" id="drag-3" draggable="true">
+                <div class="text">Honor Creativity</div>
+            </div>
+            <div class="draggable-item green" id="drag-4" draggable="true">
+                <div class="text">Respect Coworkers</div>
+            </div>
+            <div class="draggable-item green" id="drag-5" draggable="true">
+                <div class="text">Express Gratitude</div>
+            </div>
+            <div class="draggable-item green" id="drag-6" draggable="true">
+                <div class="text">Recognize Dedication</div>
+            </div>
+            <div class="draggable-item green" id="drag-7" draggable="true">
+                <div class="text">Be Enthusiastic</div>
+            </div>
+
+        </div>
+
+        <div id="help-overlay" class="overlay">
+            <div id="instructions" class="prompt">
+                <div class="close-button">X</div>
+                <div class="label">HELP</div>
+                <div class="description">Read the actions noted in the boxes along the bottom of the screen. Choose three actions you can take every day to counteract negativity and feed the positive dog; then drag them to the empty bus windows. <br>When finished, press forward to continue.</div>
+            </div>
+        </div>
+	</div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/script2.js"></script>
+    </body>
+</html>

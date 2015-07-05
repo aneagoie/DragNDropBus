@@ -1,0 +1,397 @@
+html, body {
+	font-family: Arial;
+	background-color:#FFFFFF;
+	margin:0px;
+	padding: 0px;
+	height:100%;
+	overflow:hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.absolute-Center {
+	position:absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	margin:auto;
+}
+.interactive {
+	float: left;
+    background-color: #E6E6E6;
+	position:relative;
+	overflow:hidden;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+}
+.help-button{
+    position: absolute;
+    top: 6%;
+    right: 0;
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: 0.6vw;
+    border-top-color: #F9BA55;
+    border-right-color: #F9BA55;
+    border-left-color: #DD992C;
+    border-bottom-color: #DD992C;
+    width: 6%;
+    height: 10%;
+    background-color: #F8F8F8;
+    color: #DD992C;
+    font-size: 4vw;
+    font-weight: bold;
+    text-align: center;
+    z-index: 120;
+}
+.help-button:hover{
+    cursor: pointer;
+    border-top-color: #DD992C;
+    border-right-color: #DD992C;
+    border-left-color: #C6842C;
+    border-bottom-color: #C6842C;
+    background-color: #DDDDDD;
+    color: #C6842C;
+}
+
+.interactive #header {
+    margin-top: 2%;
+    margin-bottom: 1%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 64%;
+    border-color: #B1B9B9;
+    border-style: solid;
+    border-top-width: 1pt;
+    border-right-width: 0;
+    border-bottom-width: 1pt;
+    border-left-width: 0;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    font-size: 3.5vw;
+    text-transform: uppercase;
+    color: #DF6635;
+    background-color: rgba(230,230,230, 0.7);
+}
+.interactive #header:before {
+    background: none;
+    border-top-width: 1pt;
+    border-right-width: 0;
+    border-bottom-width: 1pt;
+    border-left-width: 0;
+    border-style: solid;
+    border-color:  #fff;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+.interactive .bus{
+    margin: auto;
+    width: 90%;
+    height: 55%;
+    background: url("../images/bus.svg") no-repeat;
+    position: relative;
+    top: 3%;
+}
+.interactive .bus .droppable-container-pile{
+    position: absolute;
+    top: 12%;
+    left: 26.3%;
+    width: 80%;
+    height: 26%;
+}
+.interactive .bus .droppable-container-pile .droppable-container{
+    position: relative;
+    float: left;
+    width: 15%;
+    height: 100%;
+    margin: 0 0.5%;
+    border-radius: 1.5vw;
+    box-sizing: border-box;
+    background-color: #F3F3EB;
+    border: 0.4vw solid #C7C7C0;
+}
+.interactive .draggable-pile, .interactive .reference-pile{
+    position: absolute;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    top: 0;
+    height: 100%;
+    left: 0;
+}
+.interactive .draggable-pile .draggable-item, .interactive .reference-pile .reference-item, .droppable-container{
+    width: 11.2%;
+    height: 14%;
+    background-color: #C6C6C6;
+    position: absolute;
+    color: #4A494A;
+    font-size: 1.2vw;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    border-radius: 1.5vw;
+    top: 79%;
+}
+.interactive .draggable-pile .draggable-item{
+    background: url("../images/icon_bg.svg") no-repeat center #C6C6C6;
+    background-size: cover;
+    -webkit-box-shadow: 0px 4px 0px 0px rgba(50, 50, 50, 0.4);
+    -moz-box-shadow:    0px 4px 0px 0px rgba(50, 50, 50, 0.4);
+    box-shadow:         0px 4px 0px 0px rgba(50, 50, 50, 0.4);
+}
+.interactive .draggable-pile .draggable-item:after {
+    border-radius: 1.2vw;
+    background: none;
+    border: 0.2vw solid #fff;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 4%;
+    left: 4%;
+    right: 4%;
+    bottom: 4%;
+}
+.interactive .draggable-pile .draggable-item .text, .interactive .reference-pile .reference-item .text{
+    display: inline-block;
+    vertical-align: middle;
+    width: 80%;
+}
+.interactive .draggable-pile .draggable-item:hover{
+    cursor: pointer;
+    -moz-box-shadow: 0px 2px 0px 0px rgba(50, 50, 50, 0.3);
+}
+.interactive .draggable-pile .draggable-item:hover:after{
+    border: 2pt solid #DD9929;
+}
+.interactive .reference-pile, .interactive .reference-pile .reference-item{
+    opacity: 0.6 !important;
+}
+.interactive .draggable-pile .draggable-item.state-correct{
+    width: 13%;
+    height: 100%;
+    background-color: green;
+    cursor: pointer;
+}
+.interactive .draggable-pile .draggable-item.state-incorrect{
+    width: 13%;
+    height: 100%;
+    background-color: red;
+    border: 1px solid red;
+    cursor: pointer;
+}
+.interactive .submit-button{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20pt;
+    font-weight: 800;
+    display: block;
+    width: 155px;
+    padding: 5px;
+    margin: auto;
+    border-width: 2px;
+    border-style: solid;
+    margin-top: 20px;
+}
+.interactive .submit-button:hover, .interactive .submit-button.enabled:hover, .interactive .submit-button.state-enabled:hover{
+    cursor: pointer;
+    background-color: #DD992C;
+    border-color: #C6842C;
+    color: #fff;
+}
+.interactive .submit-button.enabled, .interactive .submit-button .state-enabled {
+    background-color: #F9BA55;
+    border-color: #DD992C;
+    color: #FFFBF7;
+}
+.interactive .submit-button, .interactive .submit-button.disabled {
+    cursor: default;
+    background-color: #aaa;
+    border-color: #999;
+    color: #ccc;
+}
+.interactive .submit-button.pressed {
+    background-color: #E06636;
+    border-color: #BF5336;
+    color: #ddd;
+}
+.interactive .overlay{
+	display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    background-color: rgba(255, 255, 255, 0.78);
+}
+.interactive .prompt{
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background-color: #E06636;
+    display: block;
+    width: 60%;
+    margin: auto;
+    color: #F5F5F5;
+    padding: 2% 0;
+    height: 38%;
+}
+.interactive .prompt .label{
+    font-size: 2vw;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    border-style: solid;
+    border-color: #fff;
+    border-width: 0 0 1pt 0;
+    padding: 0 0 1.5% 3.5%;
+}
+.interactive #feedback{
+    background-color: #B2472F;
+}
+.interactive .prompt .close-button{
+    font-size: 2vw;
+    text-align: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2%;
+    cursor: pointer;
+}
+.interactive .prompt label {
+    font-size: 24px;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    border-style: solid;
+    border-color: #fff;
+    border-width: 0 0 1pt 0;
+    padding: 0 25px 5px 25px;
+}
+.interactive .prompt .description{
+    font-size: 2vw;
+    text-align: left;
+    line-height: 150%;
+    padding: 3.5%;
+}
+#drag-1 {
+    left: 9%;
+}
+#drag-2 {
+    left: 21%;
+}
+#drag-3 {
+    left: 33%;
+}
+#drag-4 {
+    left: 45%;
+}
+#drag-5 {
+    left: 57%;
+}
+#drag-6 {
+    left: 69%;
+}
+#drag-7 {
+    left: 81%;
+}
+#ref-1 {
+    left: 9%;
+}
+#ref-2 {
+    left: 21%;
+}
+#ref-3 {
+    left: 33%;
+}
+#ref-4 {
+    left: 45%;
+}
+#ref-5 {
+    left: 57%;
+}
+#ref-6 {
+    left: 69%;
+}
+#ref-7 {
+    left: 81%;
+}
+#drop-1 {
+    left: 30%;
+}
+#drop-2 {
+    left: 42%;
+}
+#drop-3 {
+    left: 54%;
+}
+.droppable-container {
+    top: 26%;
+    border: 0.4vw solid #C7C7C0;
+    box-sizing: border-box;
+    background: #F3F3EB;
+}
+.interactive .draggable-pile .draggable-item:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: '';
+    height: 100%;
+    width: 1%;
+}
+.reference-item:before {
+    content: '';
+    height: 100%;
+    width: 1%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/*Andrei's CSS*/
+/* Prevent the text contents of draggable elements from being selectable. */
+[draggable] {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  /* Required to make elements draggable in old WebKit */
+  -khtml-user-drag: element;
+  -webkit-user-drag: element;
+}
+
+.droppable-container.over {
+  border: 2px dashed #000;
+}
+
+.droppable-container.dragged {
+  background: url("../images/icon_bg.svg") no-repeat center #C6C6C6;
+  background-size: cover;
+  border: 0.2vw solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.droppable-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.droppable-container.dragged:hover{
+    cursor: pointer;
+    -moz-box-shadow: 0px 2px 0px 0px rgba(50, 50, 50, 0.3);
+    border: 2pt solid #DD9929;
+}
+
